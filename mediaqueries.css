@@ -1,8 +1,110 @@
+/* MEDIA QUERIES */
+
+/* Tablets and smaller */
 @media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
-    #hamburger-nav {
-        display: flex;
-    }
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 0 1.5rem;
+  }
+
+  section {
+    margin: 0 5rem;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 768px) {
+  /* General spacing */
+  section {
+    margin: 0 2rem;
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  /* Profile Section */
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .section__pic-container {
+    height: 250px;
+    width: 250px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  /* About Section */
+  .section-container {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-details-container {
+    text-align: center;
+  }
+
+  /* Experience Section */
+  .article-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  article {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Projects Section */
+  .details-container {
+    margin-bottom: 2rem;
+  }
+
+  .project-img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .btn-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Arrows */
+  .arrow {
+    display: none;
+  }
 }
