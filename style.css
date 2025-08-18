@@ -155,7 +155,7 @@ section {
 }
 
 .section-container {
-    display: flexbox;
+    display: flex;
 }
 
 /* PROFILE SECTION */
