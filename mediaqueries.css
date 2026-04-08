@@ -105,6 +105,18 @@
   }
 
   /* ========== ABOUT SECTION ========== */
+  @media screen and (max-width: 768px) {
+  .about-card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-info-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
   .section-container {
     flex-direction: column;
     align-items: center;
@@ -121,6 +133,7 @@
     text-align: center;
     align-items: center;
   }
+  
 
   /* ========== EXPERIENCE SECTION ========== */
   .experience-details-container {
@@ -175,6 +188,17 @@
     font-size: 0.9rem;
   }
 
+  @media screen and (max-width: 768px) {
+  .project-card {
+    min-width: 100%;
+  }
+
+  .about-info-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
   /* Uniform images */
   .section__pic-container,
   .about-pic,
@@ -206,5 +230,18 @@
 
   article {
     font-size: 0.9rem;
+  }
+}
+
+/* About cards — mobile */
+@media screen and (max-width: 768px) {
+  .about-card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-info-card {
+    max-width: 100%;
+    width: 100%;
   }
 }

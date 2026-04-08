@@ -256,54 +256,73 @@ section {
 /* ABOUT SECTION */
 
 #about {
-    position: relative;
+  position: relative;
 }
 
-.about-containers {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+.about-card-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.about-details-container {
-    justify-content: center;
-    flex-direction: column;
+.about-info-card {
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.25rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
 }
 
-.about-containers, .about-details-container {
-    display: flex;
+.about-info-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
 }
 
-.about-pic {
-    border-radius: 2rem;
+.about-info-card p {
+  font-size: 0.85rem;
+  color: rgb(100, 100, 100);
+  line-height: 1.6;
+  margin: 0;
 }
 
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
+.about-bio-card {
+  max-width: 320px;
+  justify-content: center;
 }
 
-.details-containers {
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163,163);
-    text-align: center;
+.about-bio-card p {
+  font-size: 0.9rem;
 }
 
-.section-container {
-    display: flex;
-    gap: 4rem;
-    height: 80%;
+/* Make about cards match experience card sizing */
+.about-info-card {
+  min-width: 0;
+  max-width: none;
+  flex: 1;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
 }
 
-.section__pic-container {
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+.about-bio-card {
+  max-width: none;
+  justify-content: center;
 }
 
 /* EXPERIENCE SECTION */
@@ -352,3 +371,124 @@ article .icon {
 }
 
 
+/* PROJECTS CAROUSEL */
+
+.projects-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.projects-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+  flex: 1;
+}
+
+.projects-track::-webkit-scrollbar { display: none; }
+.projects-track { scrollbar-width: none; }
+
+.project-card {
+  min-width: 280px;
+  max-width: 300px;
+  flex-shrink: 0;
+  border: rgb(163, 163, 163) 0.1rem solid;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: white;
+}
+
+.project-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.project-slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.project-slides img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.slide-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.slide-dot.active {
+  background: white;
+}
+
+.project-card-body {
+  padding: 1rem 1.25rem;
+}
+
+.project-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.project-card-desc {
+  font-size: 0.85rem;
+  color: rgb(100, 100, 100);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.carousel-arrow {
+  background: none;
+  border: rgb(163,163,163) 0.1rem solid;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+/* Make project cards match experience card sizing */
+.project-card {
+  min-width: 0;
+  max-width: none;
+  flex: 1;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: white;
+}

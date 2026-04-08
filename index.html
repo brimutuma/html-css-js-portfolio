@@ -62,36 +62,38 @@
     </section>
     <!-- About section -->
     <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <!-- <div class="section__pic-container">
-                <img src="./assets/about-me-pic.jpg" alt="Profile Picture" class="about-pic">
-            </div> -->
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon">
-                        <h3>Experience</h3>
-                        <p>4+ Years <br>Front-End Development<br>3+ Years<br>Back-End Development<br>2+ Years<br>Product Design</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon">
-                        <h3>Education</h3>
-                        <p>B.A. Fine Art & Design <br>B.Sc. Business Information Technology</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        With a strong
-                        foundation in fine art, graphic design, and full-stack development, I craft user-centric solutions that are
-                        functional, intuitive and visually compelling, 
-                        Seamlessly blending design and business strategy to create impactful digital experiences. 
-                    </p>
-                </div>
-            </div>
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+
+    <div class="about-containers">
+
+        <div class="about-containers">
+        <img src="./assets/experience.png" alt="Experience icon" class="icon">
+        <h3>Experience</h3>
+        <p>4+ Years<br>Front-End Development</p>
+        <p>3+ Years<br>Back-End Development</p>
+        <p>2+ Years<br>Product Design</p>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+
+        <div class="about-containers">
+        <img src="./assets/education.png" alt="Education icon" class="icon">
+        <h3>Education</h3>
+        <p>B.A. Fine Art & Design</p>
+        <p>B.Sc. Business Information Technology</p>
+        </div>
+
+        <div class="about-containers">
+        <h3>Bio</h3>
+        <p>
+            With a strong foundation in fine art, graphic design, and full-stack development,
+            I craft user-centric solutions that are functional, intuitive, and visually compelling —
+            seamlessly blending design and business strategy to create impactful digital experiences.
+        </p>
+        </div>
+
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
     </section>
     <!-- Experience section -->
     <section id="experience">
@@ -246,41 +248,84 @@
     </section>
     <!-- Projects section -->
     <section id="projects">
-        <p class="section__text__p1"> Browse My Recent</p>
+        <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/my-project-1.jpg" alt="Project 1" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title">Coins.</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="loaction.href='https://github.com/'">GitHub</button>
-                    <button class="btn btn-color-2 project-btn" onclick="loaction.href='https://www.behance.net/gallery/166114435/COINS-app-Build-Early-Money-Habits'">Behance</button>
-                </div>
-                <div class="article-container">
-                    <img src="./assets/my-project-2.jpg" alt="Project 2" class="project-img">
-                </div>s
-                <h2 class="experience-sub-title project-title">le Marché</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="loaction.href='https://github.com/'">GitHub</button>
-                    <button class="btn btn-color-2 project-btn" onclick="loaction.href='https://www.behance.net/gallery/160774623/le-March-Farmers-Market-app'">Behance</button>
-                </div>
-                <div class="article-container">
-                    <img src="./assets/my-project-3.jpg" alt="Project 3" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title">Arcadia</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="loaction.href='https://github.com/'">GitHub</button>
-                    <button class="btn btn-color-2 project-btn" onclick="loaction.href='https://www.behance.net/gallery/158244987/ARCADIA-A-high-score-tracking-app-for-an-arcade'">Behance</button>
-                </div>
-            </div>    
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+
+        <div class="projects-carousel-wrapper about-containers">
+            <button class="carousel-arrow left" onclick="scrollCarousel(-1)">&#8592;</button>
+
+            <div class="projects-track" id="projectsTrack">
+
+                    <!-- Project 1: Coins -->
+
+                    <div class="project-card">
+                        <div class="project-carousel">
+                            <div class="project-slides" id="slides-0">
+                                <img src="./assets/my-project-1.jpg" alt="Coins screenshot 1">
+                                <img src="./assets/my-project-1b.jpg" alt="Coins screenshot 2">
+                                <img src="./assets/my-project-1c.jpg" alt="Coins screenshot 3">
+                            </div>
+                        <div class="slide-dots" id="dots-0"></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h2 class="project-card-title">Coins.</h2>
+                            <p class="project-card-desc">A financial literacy app for building early money habits.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/')">GitHub</button>
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.behance.net/gallery/166114435/COINS-app-Build-Early-Money-Habits')">Behance</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: le Marché -->
+
+                    <div class="project-card">
+                        <div class="project-carousel">
+                            <div class="project-slides" id="slides-1">
+                                <img src="./assets/my-project-2.jpg" alt="le Marché screenshot 1">
+                                <img src="./assets/my-project-2b.jpg" alt="le Marché screenshot 2">
+                                <img src="./assets/my-project-2c.jpg" alt="le Marché screenshot 3">
+                            </div>
+                            <div class="slide-dots" id="dots-1"></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h2 class="project-card-title">le Marché</h2>
+                            <p class="project-card-desc">A farmers market app connecting local vendors and buyers.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/')">GitHub</button>
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.behance.net/gallery/160774623/le-March-Farmers-Market-app')">Behance</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Arcadia -->
+
+                    <div class="project-card">
+                        <div class="project-carousel">
+                            <div class="project-slides" id="slides-2">
+                                <img src="./assets/my-project-3.jpg" alt="Arcadia screenshot 1">
+                                <img src="./assets/my-project-3b.jpg" alt="Arcadia screenshot 2">
+                                <img src="./assets/my-project-3c.jpg" alt="Arcadia screenshot 3">
+
+                            </div>
+                            <div class="slide-dots" id="dots-2"></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h2 class="project-card-title">Arcadia</h2>
+                            <p class="project-card-desc">A high-score tracking app for an arcade.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/')">GitHub</button>
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.behance.net/gallery/158244987/ARCADIA-A-high-score-tracking-app-for-an-arcade')">Behance</button>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
     </section>
 
 
 <!-- Script Plugin -->
     <script src="script.js"></script>
+    
 </body>
 </html>
